@@ -59,5 +59,7 @@ public class Fulltime extends Staff{
                 ", wage=" + wage +
                 '}';
     }
+
+
 }
 
