@@ -7,15 +7,15 @@ import java.util.Comparator;
 
 public class Staff_Test {
     public static void main(String[] args) {
+
+        Staff QuangAnh = new Fulltime(1, "Quang Anh", 17, 988463313, "quanganh@yahoo.com" ,70, 50, 1450);
+        Staff Phuong = new Fulltime(1, "Phuong", 18, 983785968, "phuong@yahoo.com" ,100, 70, 890);
+        Staff Trong = new Fulltime(1, "Trong", 19, 938648278, "trong@yahoo.com" ,50, 30 ,560);
+        Staff Dinh = new Parttime(63);
+        Staff Hiep = new Parttime(71);
+        Staff Ba = new Parttime(57);
+
         ArrayList<Staff> employees = new ArrayList<>();
-
-        Fulltime QuangAnh = new Fulltime(1, "Quang Anh", 17, 988463313, "quanganh@yahoo.com" ,70, 50, 1450);
-        Fulltime Phuong = new Fulltime(1, "Phuong", 18, 983785968, "phuong@yahoo.com" ,100, 70, 890);
-        Fulltime Trong = new Fulltime(1, "Trong", 19, 938648278, "trong@yahoo.com" ,50, 30 ,560);
-        Parttime Dinh = new Parttime(63);
-        Parttime Hiep = new Parttime(71);
-        Parttime Ba = new Parttime(57);
-
         employees.add(QuangAnh);
         employees.add(Phuong);
         employees.add(Trong);
