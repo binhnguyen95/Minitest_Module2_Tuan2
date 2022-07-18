@@ -1,6 +1,6 @@
 package frame;
 
-public class Staff {
+public abstract class Staff {
     private int staffId;
     private String name;
     private int age;
@@ -10,6 +10,9 @@ public class Staff {
     public Staff() {
     }
 
+    public Staff(String name) {
+    }
+
     public Staff(int staffId, String name, int age, int phoneNumber, String email) {
         this.staffId = staffId;
         this.name = name;
@@ -17,6 +20,8 @@ public class Staff {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
+
+
 
     public int getStaffId() {
         return staffId;
@@ -57,4 +62,7 @@ public class Staff {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public abstract double getNetWage();
+
 }

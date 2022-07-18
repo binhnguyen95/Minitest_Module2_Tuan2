@@ -23,5 +23,16 @@ public class Parttime extends Staff{
         this.workTime = workTime;
     }
 
+    @Override
+    public String toString() {
+        return "Parttime{" +
+                "workTime=" + workTime +
+                '}';
+    }
 
+    @Override
+    public double getNetWage() {
+        double wage = getWorkTime() * 5;
+        return wage;
+    }
 }

@@ -8,7 +8,7 @@ public class Fulltime extends Staff{
     public Fulltime(){
     }
 
-    public Fulltime(double bonus, double fines, double wage) {
+    public Fulltime( double bonus, double fines, double wage) {
         this.bonus = bonus;
         this.fines = fines;
         this.wage = wage;
@@ -45,6 +45,19 @@ public class Fulltime extends Staff{
         this.wage = wage;
     }
 
-
+    @Override
+    public double getNetWage() {
+        double wage = getWage() + ( getBonus() - getFines() ) ;
+        return wage;
     }
+
+    @Override
+    public String toString() {
+        return "Fulltime{" +
+                "bonus=" + bonus +
+                ", fines=" + fines +
+                ", wage=" + wage +
+                '}';
+    }
+}
 

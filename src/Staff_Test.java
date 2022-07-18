@@ -3,12 +3,11 @@ import frame.Parttime;
 import frame.Staff;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
-public class alo {
+public class Staff_Test {
     public static void main(String[] args) {
-        ArrayList<Staff> employees = new ArrayList();
+        ArrayList<Staff> employees = new ArrayList<>();
 
         Fulltime QuangAnh = new Fulltime(70, 50, 1450);
         Fulltime Phuong = new Fulltime(100, 70, 890);
@@ -30,15 +29,12 @@ public class alo {
         System.out.println("Luong trung binh cua cac nhan vien: ");
         System.out.println(averageWage(employees));
 
-        System.out.println("");
+        System.out.println("Nhan vien duoi muc luong trung binh: ");
         belowAverage(employees);
 
-        Collections.sort(employees, new Comparator<Staff>() {
-            @Override
-            public double compare(Staff o1, Staff o2) {
-                return o1.getNetWage() - o2.getNetWage();
-            }
-        });
+        //Sap xep luong tang dan
+        employees.sort((Comparator.comparingDouble(Staff::getNetWage)));
+        System.out.print(employees);
     }
 
     //Tong luong phai tra cho Parttime
@@ -71,7 +67,4 @@ public class alo {
             }
         }
     }
-
-    //Sap xep
-
 }
